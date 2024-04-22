@@ -5,8 +5,10 @@ import de.caritas.cob.liveservice.api.auth.JwtAuthConverter;
 import de.caritas.cob.liveservice.api.config.SpringFoxConfig;
 import org.keycloak.adapters.KeycloakConfigResolver;
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
+import org.keycloak.adapters.springboot.KeycloakSpringBootProperties;
 import org.keycloak.adapters.springsecurity.KeycloakConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -42,7 +44,7 @@ public class WebSecurityConfig {
         .requestMatchers(new NegatedRequestMatcher(new AntPathRequestMatcher("/live/**")))
         .permitAll();
 
-    //httpSecurity.oauth2ResourceServer().jwt().jwtAuthenticationConverter(jwtAuthConverter());
+    httpSecurity.oauth2ResourceServer().jwt().jwtAuthenticationConverter(jwtAuthConverter());
     return httpSecurity.build();
   }
 
@@ -64,6 +66,12 @@ public class WebSecurityConfig {
   @Bean
   public KeycloakConfigResolver keycloakConfigResolver() {
     return new KeycloakSpringBootConfigResolver();
+  }
+
+  @Bean
+  @ConfigurationProperties(prefix = "keycloak", ignoreUnknownFields = false)
+  public KeycloakSpringBootProperties keycloakSpringBootProperties() {
+    return new KeycloakSpringBootProperties();
   }
 
 }
