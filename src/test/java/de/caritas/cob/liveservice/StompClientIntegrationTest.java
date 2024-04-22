@@ -20,8 +20,8 @@ import java.util.concurrent.TimeoutException;
 import lombok.SneakyThrows;
 import org.junit.runner.RunWith;
 import org.keycloak.common.VerificationException;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -57,7 +57,7 @@ public abstract class StompClientIntegrationTest extends AbstractJUnit4SpringCon
   private final StompSessionHandlerAdapter sessionHandler = new StompSessionHandlerAdapter() {
   };
 
-  @LocalServerPort
+  @Value("${server.port}")
   private Integer port;
 
   private final WebSocketStompClient socketStompClient = new WebSocketStompClient(
