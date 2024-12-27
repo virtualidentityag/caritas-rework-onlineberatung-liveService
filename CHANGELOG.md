@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/CaritasDeutschland/caritas-onlineBeratung-liveService/compare/v1.8.0...v1.9.0) (2024-12-27)
+
+
+### Features
+
+* enable distributed tracing ([39ea070](https://github.com/CaritasDeutschland/caritas-onlineBeratung-liveService/commit/39ea070a200210ac4f2b11ea86a62fb99a627136))
+* enable live service debugging ([3074ed6](https://github.com/CaritasDeutschland/caritas-onlineBeratung-liveService/commit/3074ed6b3a3b5db1672021b707d52edec81cade7))
+* move towards java 17 partial commit ([8854780](https://github.com/CaritasDeutschland/caritas-onlineBeratung-liveService/commit/8854780e37f340a0cd75d2532cfcadb8bbb2b60d))
+* move towards java 17 partial commit (part 2) ([346d4a9](https://github.com/CaritasDeutschland/caritas-onlineBeratung-liveService/commit/346d4a917db688a549367ef7a6822ccc19f182df))
+* remove deprecated docker registry ([21fe2dc](https://github.com/CaritasDeutschland/caritas-onlineBeratung-liveService/commit/21fe2dce32e41d23a6697bb8865b7e8f1f8c89fc))
+
+
+### Bug Fixes
+
+* upgrade dockerimage versions ([b1e4d05](https://github.com/CaritasDeutschland/caritas-onlineBeratung-liveService/commit/b1e4d056bbc6ea67ab7e488b73b188a502c0cb27))
+
 ## 1.8.0 (2024-06-18)
 
 
