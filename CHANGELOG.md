@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.1](https://github.com/CaritasDeutschland/caritas-onlineBeratung-liveService/compare/v1.9.0...v1.9.1) (2025-04-10)
+
+
+### Bug Fixes
+
+* actions cache version ([5ea6b77](https://github.com/CaritasDeutschland/caritas-onlineBeratung-liveService/commit/5ea6b773aa1067b46fadfd345412119d83b04b74))
+
 ## [1.9.0](https://github.com/CaritasDeutschland/caritas-onlineBeratung-liveService/compare/v1.8.0...v1.9.0) (2024-12-27)
 
 
